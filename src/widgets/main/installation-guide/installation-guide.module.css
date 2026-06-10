@@ -1,0 +1,107 @@
+.appsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: var(--mantine-spacing-md);
+}
+
+.appButton {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 auto;
+    height: 48px;
+    min-width: 0;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: var(--mantine-radius-md);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.appButton:hover {
+    background: #1c3844;
+}
+
+.appButton:hover .bgIcon {
+    opacity: 0.3;
+}
+
+.appButtonActive,
+.appButtonActive:hover {
+    background: #1c3844;
+    border-color: rgba(34, 211, 238, 0.2);
+}
+
+.appButtonActive .appName {
+    color: var(--mantine-color-cyan-3);
+}
+
+.appButtonActive .bgIcon,
+.appButtonActive:hover .bgIcon {
+    opacity: 0.25;
+}
+
+.bgIcon {
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    opacity: 0.25;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    mask-image: linear-gradient(to right, transparent 0%, black 40%, black 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 40%, black 100%);
+}
+
+.bgIcon svg,
+.bgIcon svg path {
+    width: 100%;
+    height: 100%;
+}
+
+.bgIconActive {
+    opacity: 0.25;
+}
+
+.bgIconActive svg,
+.bgIconActive svg path {
+    width: 100%;
+    height: 100%;
+}
+
+.appName {
+    position: relative;
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--mantine-font-size-md);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+
+.appButtonActive .featuredBadge {
+    opacity: 0.8;
+    box-shadow: 0 0 8px rgba(239, 191, 4, 0.4);
+}
+
+.singlePlatform {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--mantine-radius-md);
+}
+
+.singlePlatformLabel {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--mantine-font-size-sm);
+    font-weight: 500;
+}
